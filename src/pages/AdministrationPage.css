@@ -1,0 +1,131 @@
+/* Administration Page - Rich Text Content Styles */
+
+.administration-header-content p,
+.director-office-content p,
+.team-responsibilities-content p {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.administration-header-content strong,
+.director-office-content strong,
+.team-responsibilities-content strong {
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.administration-header-content em,
+.director-office-content em,
+.team-responsibilities-content em {
+  font-style: italic;
+}
+
+.administration-header-content ul,
+.director-office-content ul,
+.team-responsibilities-content ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.administration-header-content ol,
+.director-office-content ol,
+.team-responsibilities-content ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.administration-header-content li,
+.director-office-content li,
+.team-responsibilities-content li {
+  margin-bottom: 0.25rem;
+  line-height: 1.5;
+}
+
+.administration-header-content h1,
+.director-office-content h1,
+.team-responsibilities-content h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1e293b;
+}
+
+.administration-header-content h2,
+.director-office-content h2,
+.team-responsibilities-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #1e293b;
+}
+
+.administration-header-content h3,
+.director-office-content h3,
+.team-responsibilities-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1e293b;
+}
+
+.administration-header-content a,
+.director-office-content a,
+.team-responsibilities-content a {
+  color: #9b1c31;
+  text-decoration: underline;
+}
+
+.administration-header-content a:hover,
+.director-office-content a:hover,
+.team-responsibilities-content a:hover {
+  color: #7a1628;
+}
+
+.administration-header-content blockquote,
+.director-office-content blockquote,
+.team-responsibilities-content blockquote {
+  border-left: 4px solid #9b1c31;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  font-style: italic;
+  color: #64748b;
+}
+
+/* Quill editor specific classes */
+.administration-header-content .ql-align-center,
+.director-office-content .ql-align-center,
+.team-responsibilities-content .ql-align-center {
+  text-align: center;
+}
+
+.administration-header-content .ql-align-right,
+.director-office-content .ql-align-right,
+.team-responsibilities-content .ql-align-right {
+  text-align: right;
+}
+
+.administration-header-content .ql-align-justify,
+.director-office-content .ql-align-justify,
+.team-responsibilities-content .ql-align-justify {
+  text-align: justify;
+}
+
+.administration-header-content .ql-size-small,
+.director-office-content .ql-size-small,
+.team-responsibilities-content .ql-size-small {
+  font-size: 0.875rem;
+}
+
+.administration-header-content .ql-size-large,
+.director-office-content .ql-size-large,
+.team-responsibilities-content .ql-size-large {
+  font-size: 1.25rem;
+}
+
+.administration-header-content .ql-size-huge,
+.director-office-content .ql-size-huge,
+.team-responsibilities-content .ql-size-huge {
+  font-size: 1.5rem;
+}

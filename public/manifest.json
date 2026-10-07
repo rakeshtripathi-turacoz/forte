@@ -1,0 +1,25 @@
+{
+  "short_name": "Forte Institute",
+  "name": "Forte Institute of Technology",
+  "icons": [
+    {
+      "src": "fit_logo.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "fit_logo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "fit_logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#981b1e",
+  "background_color": "#ffffff"
+}

@@ -1,0 +1,156 @@
+/* Vision & Mission Page - Rich Text Content Styles */
+
+/* Make sure HTML from Rich Text Editor renders properly */
+.vision-content p,
+.mission-content p,
+.core-value-content p {
+  margin-bottom: 1em;
+}
+
+.vision-content strong,
+.mission-content strong,
+.core-value-content strong {
+  font-weight: bold !important;
+}
+
+.vision-content em,
+.mission-content em,
+.core-value-content em {
+  font-style: italic !important;
+}
+
+.vision-content u,
+.mission-content u,
+.core-value-content u {
+  text-decoration: underline !important;
+}
+
+.vision-content h1,
+.mission-content h1,
+.core-value-content h1 {
+  font-size: 2em !important;
+  font-weight: bold !important;
+  margin-bottom: 0.5em !important;
+}
+
+.vision-content h2,
+.mission-content h2,
+.core-value-content h2 {
+  font-size: 1.5em !important;
+  font-weight: bold !important;
+  margin-bottom: 0.5em !important;
+}
+
+.vision-content h3,
+.mission-content h3,
+.core-value-content h3 {
+  font-size: 1.25em !important;
+  font-weight: bold !important;
+  margin-bottom: 0.5em !important;
+}
+
+.vision-content ul,
+.mission-content ul,
+.core-value-content ul {
+  list-style-type: disc !important;
+  padding-left: 2em !important;
+  margin-bottom: 1em !important;
+}
+
+.vision-content ol,
+.mission-content ol,
+.core-value-content ol {
+  list-style-type: decimal !important;
+  padding-left: 2em !important;
+  margin-bottom: 1em !important;
+}
+
+.vision-content li,
+.mission-content li,
+.core-value-content li {
+  margin-bottom: 0.5em !important;
+}
+
+.vision-content blockquote,
+.mission-content blockquote,
+.core-value-content blockquote {
+  border-left: 4px solid #dc2626 !important;
+  padding-left: 16px !important;
+  margin-left: 0 !important;
+  color: #6b7280 !important;
+  font-style: italic !important;
+  margin-bottom: 1em !important;
+}
+
+.vision-content a,
+.mission-content a,
+.core-value-content a {
+  color: #2563eb !important;
+  text-decoration: underline !important;
+}
+
+.vision-content img,
+.mission-content img,
+.core-value-content img {
+  max-width: 100% !important;
+  height: auto !important;
+  margin-bottom: 1em !important;
+}
+
+.vision-content pre,
+.mission-content pre,
+.core-value-content pre {
+  background-color: #f3f4f6 !important;
+  padding: 12px !important;
+  border-radius: 4px !important;
+  overflow-x: auto !important;
+  margin-bottom: 1em !important;
+  font-family: monospace !important;
+}
+
+.vision-content code,
+.mission-content code,
+.core-value-content code {
+  background-color: #f3f4f6 !important;
+  padding: 2px 6px !important;
+  border-radius: 3px !important;
+  font-family: monospace !important;
+}
+
+/* Text alignment classes from Quill */
+.vision-content .ql-align-center,
+.mission-content .ql-align-center,
+.core-value-content .ql-align-center {
+  text-align: center !important;
+}
+
+.vision-content .ql-align-right,
+.mission-content .ql-align-right,
+.core-value-content .ql-align-right {
+  text-align: right !important;
+}
+
+.vision-content .ql-align-justify,
+.mission-content .ql-align-justify,
+.core-value-content .ql-align-justify {
+  text-align: justify !important;
+}
+
+/* Font sizes from Quill */
+.vision-content .ql-size-small,
+.mission-content .ql-size-small,
+.core-value-content .ql-size-small {
+  font-size: 0.75em !important;
+}
+
+.vision-content .ql-size-large,
+.mission-content .ql-size-large,
+.core-value-content .ql-size-large {
+  font-size: 1.5em !important;
+}
+
+.vision-content .ql-size-huge,
+.mission-content .ql-size-huge,
+.core-value-content .ql-size-huge {
+  font-size: 2.5em !important;
+}

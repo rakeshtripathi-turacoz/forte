@@ -1,0 +1,165 @@
+/* Home Page - Rich Text Content Styles */
+
+/* Hero Description */
+.hero-description p {
+  margin-bottom: 1em;
+}
+
+.hero-description strong {
+  font-weight: bold !important;
+}
+
+.hero-description em {
+  font-style: italic !important;
+}
+
+.hero-description u {
+  text-decoration: underline !important;
+}
+
+.hero-description h1,
+.hero-description h2,
+.hero-description h3 {
+  font-weight: bold !important;
+  margin-bottom: 0.5em !important;
+}
+
+.hero-description ul,
+.hero-description ol {
+  padding-left: 2em !important;
+  margin-bottom: 1em !important;
+}
+
+.hero-description ul {
+  list-style-type: disc !important;
+}
+
+.hero-description ol {
+  list-style-type: decimal !important;
+}
+
+.hero-description a {
+  color: #fbbf24 !important;
+  text-decoration: underline !important;
+}
+
+/* Featured Programs Description */
+.program-description p {
+  margin-bottom: 0.5em;
+}
+
+.program-description strong {
+  font-weight: bold !important;
+}
+
+.program-description em {
+  font-style: italic !important;
+}
+
+.program-description ul,
+.program-description ol {
+  padding-left: 1.5em !important;
+  margin-bottom: 0.5em !important;
+  font-size: 0.875rem !important;
+}
+
+.program-description ul {
+  list-style-type: disc !important;
+}
+
+.program-description ol {
+  list-style-type: decimal !important;
+}
+
+/* Why Choose Features Description */
+.feature-description p {
+  margin-bottom: 0.5em;
+}
+
+.feature-description strong {
+  font-weight: bold !important;
+}
+
+.feature-description em {
+  font-style: italic !important;
+}
+
+.feature-description ul,
+.feature-description ol {
+  padding-left: 1.5em !important;
+  margin-bottom: 0.5em !important;
+}
+
+.feature-description ul {
+  list-style-type: disc !important;
+}
+
+.feature-description ol {
+  list-style-type: decimal !important;
+}
+
+/* Testimonials Text */
+.testimonial-text p {
+  margin-bottom: 0.5em;
+}
+
+.testimonial-text strong {
+  font-weight: bold !important;
+}
+
+.testimonial-text em {
+  font-style: italic !important;
+}
+
+/* CTA Description */
+.cta-description p {
+  margin-bottom: 0.5em;
+}
+
+.cta-description strong {
+  font-weight: bold !important;
+}
+
+.cta-description em {
+  font-style: italic !important;
+}
+
+.cta-description ul,
+.cta-description ol {
+  padding-left: 2em !important;
+  margin-bottom: 1em !important;
+}
+
+.cta-description ul {
+  list-style-type: disc !important;
+}
+
+.cta-description ol {
+  list-style-type: decimal !important;
+}
+
+/* Quill alignment classes */
+.ql-align-center {
+  text-align: center !important;
+}
+
+.ql-align-right {
+  text-align: right !important;
+}
+
+.ql-align-justify {
+  text-align: justify !important;
+}
+
+/* Quill font sizes */
+.ql-size-small {
+  font-size: 0.75em !important;
+}
+
+.ql-size-large {
+  font-size: 1.5em !important;
+}
+
+.ql-size-huge {
+  font-size: 2.5em !important;
+}

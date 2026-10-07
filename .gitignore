@@ -1,0 +1,62 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+!.env.production.example
+
+# Frontend environment
+/src/.env
+/src/.env.*
+!/src/.env.example
+
+# Python virtual environment
+myenv/
+
+# API dependencies
+/api/node_modules/
+
+# API environment / secrets
+/api/.env
+/api/.env.*
+!/api/.env.example
+!/api/.env.production.example
+
+# Database dumps
+*.sql
+
+# Runtime uploads / backups
+*.tar.gz
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+
+# Runtime uploaded files
+/api/uploads/

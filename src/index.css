@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=JetBrains+Mono:wght@400&display=swap');
+
+body {
+  background-color: #f1f5f9;
+  color: #1e293b;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* BRAND LOGO STYLES */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.shield-icon {
+  width: 42px;
+  height: 50px;
+  background: linear-gradient(135deg, #981b1e 0%, #721215 100%);
+  border-radius: 4px 4px 24px 24px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(152, 27, 30, 0.25);
+  flex-shrink: 0;
+}
+
+.shield-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #d4af37;
+  border-radius: 4px 4px 0 0;
+}
+
+.shield-char {
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 28px;
+  margin-top: 3px;
+  font-style: italic;
+}
+
+/* Large Logo */
+.shield-icon.large {
+  width: 120px;
+  height: 144px;
+  border-radius: 8px 8px 60px 60px;
+}
+
+.shield-icon.large::before {
+  height: 8px;
+  border-radius: 8px 8px 0 0;
+}
+
+.shield-icon.large .shield-char {
+  font-size: 80px;
+  margin-top: 6px;
+}
+
+/* UI UTILITIES */
+.fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+/* Custom scrollbar for announcements */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #981b1e;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #721215;
+}
+
+/* HERO STYLES */
+.hero-bg-image {
+  background-image: url('https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+  background-size: cover;
+  background-position: center 20%;
+}
+
+.hero-overlay {
+  background: linear-gradient(to right, rgba(152, 27, 30, 0.95) 0%, rgba(152, 27, 30, 0.7) 60%, rgba(212, 175, 55, 0.2) 100%);
+}
+
+/* MEGA MENU */
+.group:hover .mega-menu {
+  display: block;
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
