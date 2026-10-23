@@ -185,7 +185,7 @@ router.get('/departments', async (req, res) => {
         d.faculty_strength,
         d.display_order,
         COUNT(c.id) as total_courses,
-        GROUP_CONCAT(c.course_name SEPARATOR ', ') as programs
+        STRING_AGG(c.course_name, ', ') as programs
       FROM departments d
       LEFT JOIN courses c ON d.id = c.department_id
       WHERE d.is_active = 1
@@ -473,7 +473,7 @@ router.get('/complete', async (req, res) => {
         d.faculty_strength,
         d.display_order,
         COUNT(c.id) as total_courses,
-        GROUP_CONCAT(c.course_name SEPARATOR ', ') as programs
+        STRING_AGG(c.course_name, ', ') as programs
       FROM departments d
       LEFT JOIN courses c ON d.id = c.department_id
       WHERE d.is_active = 1

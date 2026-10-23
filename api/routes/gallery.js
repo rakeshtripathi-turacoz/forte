@@ -249,7 +249,7 @@ router.post('/images', upload.single('image'), async (req, res) => {
 
     const [result] = await db.query(
       `INSERT INTO gallery_images (title, description, image_path, category_id, upload_date, photographer, display_order)
-       VALUES (?, ?, ?, ?, CURDATE(), ?, ?)`,
+       VALUES (?, ?, ?, ?, CURRENT_DATE, ?, ?)`,
       [title, description || null, imagePath, category_id, photographer || null, display_order || 0]
     );
 

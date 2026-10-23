@@ -169,7 +169,7 @@ router.get('/statistics', async (req, res) => {
         SUM(CASE WHEN status = 'sent' THEN 1 ELSE 0 END) as sent,
         SUM(CASE WHEN status = 'failed' THEN 1 ELSE 0 END) as failed
       FROM email_logs
-      WHERE created_at >= DATE_SUB(NOW(), INTERVAL 7 DAY)
+      WHERE created_at >= NOW() - INTERVAL '7 days'
       GROUP BY DATE(created_at)
       ORDER BY date DESC`
     );
@@ -455,7 +455,7 @@ router.post('/:id/retry', async (req, res) => {
   try {
     // Get the failed email log
     const [logs] = await db.query(
-      'SELECT * FROM email_logs WHERE id = ? AND status = "failed"',
+      "SELECT * FROM email_logs WHERE id = ? AND status = 'failed'",
       [req.params.id]
     );
 
@@ -468,7 +468,7 @@ router.post('/:id/retry', async (req, res) => {
 
     // Update status to pending for retry
     await db.query(
-      'UPDATE email_logs SET status = "pending", error_message = NULL WHERE id = ?',
+      "UPDATE email_logs SET status = 'pending', error_message = NULL WHERE id = ?",
       [req.params.id]
     );
 

@@ -166,7 +166,7 @@ router.put('/:role', upload.single('profile_image'), async (req, res) => {
 router.get('/', async (req, res) => {
   try {
     const [rows] = await db.query(
-      'SELECT * FROM leadership_messages WHERE is_active = TRUE ORDER BY FIELD(role_type, "chairman", "secretary", "joint_secretary", "director")'
+      "SELECT * FROM leadership_messages WHERE is_active = TRUE ORDER BY array_position(ARRAY['chairman', 'secretary', 'joint_secretary', 'director']::varchar[], role_type)"
     );
 
     res.json({

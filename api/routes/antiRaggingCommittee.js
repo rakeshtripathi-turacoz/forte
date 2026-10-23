@@ -6,20 +6,42 @@ const db = require('../config/database');
 // COMPLETE PAGE DATA
 // ========================================
 
-// Get all anti-ragging page data using stored procedure
+// Get all anti-ragging page data
 router.get('/complete', async (req, res) => {
   try {
-    const [results] = await db.query('CALL GetAntiRaggingPageData()');
+    const [
+      [header],
+      [antiRaggingCommittee],
+      [grievanceCommittee],
+      [emergencyContacts],
+      [documents],
+      [statistics]
+    ] = await Promise.all([
+      db.query('SELECT * FROM anti_ragging_page_header WHERE id = 1'),
+      db.query('SELECT * FROM anti_ragging_committee_members WHERE is_active = TRUE ORDER BY display_order'),
+      db.query('SELECT * FROM grievance_committee_members WHERE is_active = TRUE ORDER BY display_order'),
+      db.query('SELECT * FROM emergency_contacts WHERE is_active = TRUE ORDER BY display_order'),
+      db.query('SELECT * FROM committee_documents WHERE is_active = TRUE ORDER BY display_order'),
+      db.query(`
+        SELECT
+          COUNT(*) as total_grievances,
+          SUM(CASE WHEN status = 'Resolved' THEN 1 ELSE 0 END) as resolved_count,
+          SUM(CASE WHEN status = 'In Progress' THEN 1 ELSE 0 END) as in_progress_count,
+          SUM(CASE WHEN status = 'Submitted' THEN 1 ELSE 0 END) as pending_count,
+          SUM(CASE WHEN priority = 'Urgent' THEN 1 ELSE 0 END) as urgent_count
+        FROM grievance_submissions
+      `)
+    ]);
 
     res.json({
       success: true,
       data: {
-        header: results[0][0] || null,
-        antiRaggingCommittee: results[1] || [],
-        grievanceCommittee: results[2] || [],
-        emergencyContacts: results[3] || [],
-        documents: results[4] || [],
-        statistics: results[5][0] || null
+        header: header[0] || null,
+        antiRaggingCommittee,
+        grievanceCommittee,
+        emergencyContacts,
+        documents,
+        statistics: statistics[0] || null
       }
     });
   } catch (error) {
@@ -565,7 +587,7 @@ router.get('/documents', async (req, res) => {
     const params = [];
 
     if (category) {
-      query += ' AND (document_category = ? OR document_category = "Both")';
+      query += " AND (document_category = ? OR document_category = 'Both')";
       params.push(category);
     }
 

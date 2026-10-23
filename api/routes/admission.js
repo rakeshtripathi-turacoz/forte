@@ -251,7 +251,7 @@ router.get('/process-steps', async (req, res) => {
     const params = [];
 
     if (level) {
-      query += ' AND (program_level = ? OR program_level = "All")';
+      query += " AND (program_level = ? OR program_level = 'All')";
       params.push(level);
     }
 
